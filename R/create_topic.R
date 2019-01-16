@@ -1,7 +1,8 @@
 #' @importFrom magrittr %>%
 #' @export
 create_topic <- function(topic_name,
-                         display_name = NULL){
+                         display_name = NULL,
+                         profile = "default"){
 
   if (missing(topic_name)){
     stop("Topic name is required")
@@ -17,17 +18,19 @@ create_topic <- function(topic_name,
 
   sns("create-topic",
       topic_name = topic_name,
-      display_name = display_name)
+      display_name = display_name,
+      profile = profile)
 }
 
 #' @export
-delete_topic <- function(topic){
+delete_topic <- function(topic,
+                         profile = "default"){
 
   if (missing(topic)){
     stop("Topic name or arn is required.")
   }
 
-  sns("delete-topic", arn = topic_arn(topic))
+  sns("delete-topic", arn = topic_arn(topic), profile = profile)
 }
 
 
