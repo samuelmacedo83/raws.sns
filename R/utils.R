@@ -1,8 +1,8 @@
 # this function verifies the topic existence. it will return the
 # arn indepently if topic is a name or arn.
-topic_arn <- function(topic){
+topic_arn <- function(topic, profile = "default"){
 
-  topic_list <- list_topics()
+  topic_list <- list_topics(profile = profile)
 
   # An arn is a string with 6 components separate by : and
   # the first one is always arn.
@@ -26,6 +26,7 @@ topic_arn <- function(topic){
  topic
 }
 
+# verifies if topic name or display name is valid
 is_valid_name <- function(topic_name, display_name){
 
 
@@ -41,3 +42,20 @@ is_valid_name <- function(topic_name, display_name){
   if (!is.null(display_name) & stringr::str_length(display_name) > 10)
     stop("Display name cannot be greater than 10.")
 }
+
+sns_parameter <- function(command, parameter, value){
+  if (!is.null(value)){
+    command <- paste(command, parameter, value)
+  }
+  command
+}
+
+sns_text_parameter <- function(command, parameter, value){
+  if (!is.null(value)){
+    value <- paste0("\"", value, "\"")
+    command <- paste(command, parameter, value)
+  }
+  command
+}
+
+
