@@ -26,11 +26,21 @@ create_topic <- function(topic_name,
 delete_topic <- function(topic,
                          profile = "default"){
 
-  if (missing(topic)){
-    stop("Topic name or arn is required.")
-  }
+  if (missing(topic)) stop("Topic name or arn is required.")
 
-  sns("delete-topic", arn = topic_arn(topic), profile = profile)
+  sns("delete-topic", arn = topic_arn(topic, profile), profile = profile)
 }
 
+#' @export
+rename_display_name <- function(topic,
+                                display_name,
+                                profile = "default"){
 
+  if (missing(topic)) stop("Topic name or arn is required.")
+  if (missing(display_name)) stop("Display name is required.")
+
+  sns("set-topic-attributes",
+      arn = topic_arn(topic, profile),
+      rename_display = display_name,
+      profile = profile)
+}
