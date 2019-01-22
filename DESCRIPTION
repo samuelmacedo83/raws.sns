@@ -12,6 +12,7 @@ LazyData: true
 Imports: 
     jsonlite,
     magrittr,
+    purrr,
     raws.profile,
     stringr,
     tibble
