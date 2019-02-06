@@ -17,3 +17,5 @@ Imports:
     stringr,
     tibble
 RoxygenNote: 6.1.1
+Suggests: 
+    testthat
