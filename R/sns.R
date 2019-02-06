@@ -11,10 +11,7 @@ sns <- function(sns_function,
                 phone_number = NULL,
                 message = NULL,
                 subject = NULL,
-                profile = "default",
-                system_return = FALSE,
-                ignore_error = FALSE
-                ){
+                profile = "default"){
 
   command <- paste("aws sns", sns_function) %>%
     topic_name_(topic_name) %>%
@@ -29,7 +26,15 @@ sns <- function(sns_function,
     rename_display_name_(rename_display) %>%
     profile_(profile)
 
-  system(command, intern = system_return, ignore.stderr = ignore_error)
+  sns <- suppressWarnings(system(command,
+                                 intern = TRUE,
+                                 ignore.stderr = TRUE))
+
+  # verifing if there are errors or warnings
+  sns_error(sns)
+  sns_warning(sns, phone_number, subscription_arn)
+
+  if (length(sns) != 0) jsonlite::fromJSON(sns)
 }
 
 profile_ <- function(command, profile){
@@ -92,6 +97,28 @@ rename_display_name_ <- function(command, display_name){
                       "\"")
   }
   command
+}
+
+# error verification
+sns_error <- function(status){
+  if (is.integer(status)) {
+    if (status == 255){
+      stop("This topic does not exist.", call. = FALSE)
+    }
+  }
+}
+
+# warning verification
+sns_warning <- function(status, phone_number, subscription_arn){
+  if (!is.null(attributes(status)$status)){
+    if (!is.null(phone_number)){
+      stop("SMS is only available for us-east-1 region", call. = FALSE)
+    } else if (!is.null(subscription_arn)){
+      warning(paste("The subscription arn", subscription_arn, "does not exist."))
+    } else {
+      stop("This topic does not exist.", call. = FALSE)
+    }
+  }
 }
 
 
