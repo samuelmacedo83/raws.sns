@@ -19,7 +19,7 @@ this function will use the default profile.}
 \description{
 The \code{list_topics()} shows the topics created in your SNS
 account. You can see your subscriptions using
- \code{list_subscriptions("your topic")}.
+\code{list_subscriptions("your topic")}.
 }
 \examples{
 \dontrun{
