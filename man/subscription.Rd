@@ -30,8 +30,8 @@ performance in \code{unsubscribe()}. You can check the endpoint ARN in SNS
 account or usind the \code{list_subscription()}}
 }
 \description{
-You can subscribe one or more users with \code{subscribe()}. For unsubscribe
-a user use an endpoint_arn for better performance.
+You can subscribe one or more users with \code{subscribe()}. Unsubscribe users
+using the endpoint. You can use an endpoint_arn for better performance.
 }
 \examples{
 \dontrun{

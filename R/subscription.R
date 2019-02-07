@@ -1,7 +1,9 @@
-#' Subscribe and unsubscrive endpoints
+#' Subscribe and unsubscribe endpoints
 #'
-#' You can subscribe one or more users with \code{subscribe()}. Unsubscribe users
-#' using the endpoint. You can use an endpoint_arn for better performance.
+#' Subscribe one or more users to a topic and unsubscribe them
+#' using their endpoints. For better performance, use the endpoint ARN on
+#' \code{unsubscribe()}. You can retrieve these ARN's in your SNS account on
+#' Amazon or using \code{list_subscriptions()}.
 #'
 #' @template roxlate-topic
 #' @param protocol A string or a vector of strings with the protocol.
