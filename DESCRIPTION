@@ -6,7 +6,6 @@ Authors@R: c(
     person("Samuel", "Macêdo", 
       email = "samuelmacedo@recife.ifpe.edu.br", role = c("aut", "cre"))
     )
-Maintainer: Samuel Macêdo <samuelmacedo@recife.ifpe.edu.br>
 Description: This is an R wrapper from the AWS Command Line Interface that 
   provides methods to send messages using Amazon Simple Notification Service. 
   You can create as many topics as you want, subscribe users to a topic and
