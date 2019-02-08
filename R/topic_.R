@@ -1,6 +1,6 @@
 #' Create, delete and manage your topic
 #'
-#' Create and delete a topic in your SNS acccout. Display name is optional and
+#' Create and delete a topic in your SNS account. Display name is optional and
 #' only appears when you send emails. If you want to modify or insert a display
 #' name in a topic that already exist, use \code{rename_display_name()}.
 #'
