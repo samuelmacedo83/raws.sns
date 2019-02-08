@@ -4,7 +4,7 @@
 \alias{subscription}
 \alias{subscribe}
 \alias{unsubscribe}
-\title{Subscribe and unsubscrive endpoints}
+\title{Subscribe and unsubscribe endpoints}
 \usage{
 subscribe(topic, protocol, endpoint, profile = "default")
 
@@ -25,13 +25,15 @@ for example: "+558112345678".}
 \item{profile}{Your profile name in AWS. If profile was not supplied
 this function will use the default profile.}
 
-\item{endpoint_arn}{A string with the user's ARN. Use this for better
+\item{subscription_arn}{A string with the user's ARN. Use this for better
 performance in \code{unsubscribe()}. You can check the endpoint ARN in SNS
 account or usind the \code{list_subscription()}}
 }
 \description{
-You can subscribe one or more users with \code{subscribe()}. Unsubscribe users
-using the endpoint. You can use an endpoint_arn for better performance.
+Subscribe one or more users to a topic and unsubscribe them
+using their endpoints. For better performance, use the endpoint ARN on
+\code{unsubscribe()}. You can retrieve these ARN's in your SNS account on
+Amazon or using \code{list_subscriptions()}.
 }
 \examples{
 \dontrun{

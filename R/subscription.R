@@ -13,7 +13,7 @@
 #' @param endpoint A string or a vector of strings with users that you want
 #' to subscribe. Use a valid email and for SMS use a complete cell phone number,
 #' for example: "+558112345678".
-#' @param endpoint_arn A string with the user's ARN. Use this for better
+#' @param subscription_arn A string with the user's ARN. Use this for better
 #' performance in \code{unsubscribe()}. You can check the endpoint ARN in SNS
 #' account or usind the \code{list_subscription()}
 #' @template roxlate-profile
