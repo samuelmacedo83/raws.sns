@@ -1,5 +1,4 @@
 #' @importFrom magrittr %>%
-#' @export
 sns <- function(sns_function,
                 topic_name = NULL,
                 display_name = NULL,
