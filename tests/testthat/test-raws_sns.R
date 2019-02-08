@@ -66,7 +66,7 @@ test_that("describe_topic works",{
   region <- profile_region()
 
   if (region == "us-east-1"){
-    Sys.sleep(20) # it is take a while to update the topic on aws
+    Sys.sleep(30) # it is take a while to update the topic on aws
     topic <- describe_topic("raws_sns_test")
 
     expect_equal(topic$subscription_confirmed, 1)
