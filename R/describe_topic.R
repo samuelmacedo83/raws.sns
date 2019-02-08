@@ -1,6 +1,6 @@
 #' Topic description
 #'
-#' This function returns a tibble with some informations about the topic.
+#' This function returns a data frame with some informations about the topic.
 #'
 #' @template roxlate-topic
 #' @template roxlate-profile

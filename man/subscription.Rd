@@ -15,7 +15,7 @@ unsubscribe(topic, endpoint, subscription_arn, profile = "default")
 
 \item{protocol}{A string or a vector of strings with the protocol.
 "sms" and "email" are supported. If you have a vector of endpoints with the
-same protocol you just need to specify the procotol, not a vector of
+same protocol, you just need to specify the protocol once, not a vector of
 protocols.}
 
 \item{endpoint}{A string or a vector of strings with users that you want
@@ -27,7 +27,7 @@ this function will use the default profile.}
 
 \item{subscription_arn}{A string with the user's ARN. Use this for better
 performance in \code{unsubscribe()}. You can check the endpoint ARN in SNS
-account or usind the \code{list_subscription()}}
+account or using the \code{list_subscription()}}
 }
 \description{
 Subscribe one or more users to a topic and unsubscribe them
