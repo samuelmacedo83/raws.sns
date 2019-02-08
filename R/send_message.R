@@ -11,6 +11,7 @@
 #' @param subject (optional) The message subject. Only available to "email"
 #' protocol.
 #' @template roxlate-profile
+#' @template roxlate-suppress_output
 #' @examples
 #' \dontrun{
 #' # send a message to a topic

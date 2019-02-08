@@ -21,6 +21,8 @@ hyphens (-), or underscores (_).}
 \item{display_name}{(optional) The name that will display when you send an email.
 The display name won't appear in SMS. Display name cannot be greater than 10.}
 
+\item{suppress_output}{Use TRUE if you don't want the output.}
+
 \item{profile}{Your profile name in AWS. If profile was not supplied
 this function will use the default profile.}
 

@@ -18,6 +18,8 @@ doesn't need to be in a topic.}
 \item{subject}{(optional) The message subject. Only available to "email"
 protocol.}
 
+\item{suppress_output}{Use TRUE if you don't want the output.}
+
 \item{profile}{Your profile name in AWS. If profile was not supplied
 this function will use the default profile.}
 }

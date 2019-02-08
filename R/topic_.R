@@ -9,6 +9,7 @@
 #' @template roxlate-topic
 #' @param display_name (optional) The name that will display when you send an email.
 #' The display name won't appear in SMS. Display name cannot be greater than 10.
+#' @template roxlate-suppress_output
 #' @template roxlate-profile
 #'
 #' @examples
