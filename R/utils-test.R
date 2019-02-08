@@ -21,8 +21,8 @@ subscribe_complete_test <- function(subscriptions){
   subscriptions_test <- tibble::data_frame(endpoint = endpoint,
                                            protocol = protocol)
 
-  expect_equal(subscriptions[order(subscriptions$endpoint), 1:2],
-               subscriptions_test[order(subscriptions_test$endpoint), ])
+  testthat::expect_equal(subscriptions[order(subscriptions$endpoint), 1:2],
+                         subscriptions_test[order(subscriptions_test$endpoint), ])
 }
 
 # this test uses just email
@@ -41,8 +41,8 @@ subscribe_test <- function(){
                                            protocol = protocol,
                                            arn = arn)
 
-  expect_equal(subscriptions[order(subscriptions$endpoint), ],
-               subscriptions_test[order(subscriptions_test$endpoint), ])
+  testthat::expect_equal(subscriptions[order(subscriptions$endpoint), ],
+                         subscriptions_test[order(subscriptions_test$endpoint), ])
 }
 
 # this function uses sms and amail
@@ -58,8 +58,8 @@ unsubscribe_complete_test <- function(){
   subscriptions_test <- tibble::data_frame(endpoint = endpoint,
                                            protocol = protocol)
 
-  expect_equal(subscriptions[order(subscriptions$endpoint), 1:2],
-               subscriptions_test[order(subscriptions_test$endpoint), ])
+  testthat::expect_equal(subscriptions[order(subscriptions$endpoint), 1:2],
+                         subscriptions_test[order(subscriptions_test$endpoint), ])
 }
 
 # this function uses only email
@@ -74,7 +74,7 @@ unsubscribe_test <- function(){
   subscriptions_test <- tibble::data_frame(endpoint = endpoint,
                                            protocol = protocol)
 
-  expect_equal(subscriptions[order(subscriptions$endpoint), 1:2],
-               subscriptions_test[order(subscriptions_test$endpoint), ])
+  testthat::expect_equal(subscriptions[order(subscriptions$endpoint), 1:2],
+                         subscriptions_test[order(subscriptions_test$endpoint), ])
 }
 
