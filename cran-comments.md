@@ -19,3 +19,8 @@ Possibly mis-spelled words in DESCRIPTION:
 * CLI (Command Line Interface)
 * SNS (Simple Notification Service)
 * SMS (Short Message Service)
+
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Add reference to AWS SNS in DESCRIPTION
