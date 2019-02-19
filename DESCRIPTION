@@ -7,11 +7,11 @@ Authors@R: c(
       email = "samuelmacedo@recife.ifpe.edu.br", role = c("aut", "cre"))
     )
 Description: This is an R wrapper from the AWS Command Line Interface that 
-  provides methods to send messages using Amazon Simple Notification Service. 
-  You can create as many topics as you want, subscribe users to a topic and
-  send notifications to them via SMS or e-mail. It also provides a function to
-  automatically install AWS CLI, but you can download it and install it 
-  manually if you prefer.
+  provides methods to send messages using Amazon Simple Notification Service, see 
+  <https://aws.amazon.com/sns/>. You can create as many topics as you want, 
+  subscribe users to a topic and send notifications to them via SMS or e-mail. 
+  It also provides a function to automatically install AWS CLI, but you can 
+  download it and install it manually if you prefer.
 License: GPL (>= 2)
 LazyData: true
 Imports: 
